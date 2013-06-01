@@ -1,0 +1,20 @@
+[
+{
+  "modid": "MGM",
+  "name": "Mythical Gods Mod",
+  "description": "May The Gods Be With You...",
+  "version": "Alpha 1.1",
+  "url": "www.TamModding.com",
+  "updateUrl": "",
+  "authorList": [
+    "TAM modding team"
+  ],
+  "credits": "",
+  "logoFile": "/mods/MGM/textures/logo/logo.png",
+  "screenshots": [
+  ],
+  "parent":"",
+  "dependencies": [
+]
+}
+]
