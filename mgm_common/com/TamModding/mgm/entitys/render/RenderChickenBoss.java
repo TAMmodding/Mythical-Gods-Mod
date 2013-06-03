@@ -8,6 +8,14 @@ import net.minecraft.entity.EntityLiving;
 import com.TamModding.mgm.entitys.EntityChickenBoss;
 import com.TamModding.mgm.entitys.models.ModelChickenBoss;
 
+
+/**
+ * Mythical-Gods-Mod
+ * 
+ * @author TAM Modding
+ *         Copyright (c) 2013
+ */
+
 public class RenderChickenBoss extends RenderLiving {
     protected ModelChickenBoss model;
 
