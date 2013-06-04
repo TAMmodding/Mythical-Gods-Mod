@@ -18,6 +18,7 @@ public class CloudBlock extends BlocksBase {
         this.setHardness(1.0F);
         this.setResistance(1.0F);
         this.setStepSound(soundClothFootstep);
+      
     }
 
     /* Set the boundingbox of the block to 7/8 of a block */

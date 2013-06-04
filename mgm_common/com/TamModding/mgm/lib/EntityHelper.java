@@ -60,6 +60,7 @@ public class EntityHelper {
     /**
      * Register entity names
      */
+      
     private static void registerEntityNames() {
         LanguageRegistry.instance().addStringLocalization("entity.HeroNite.name", "Final Boss: HeroNite");
         LanguageRegistry.instance().addStringLocalization("entity.FlyPig.name", "Flying Pig");
