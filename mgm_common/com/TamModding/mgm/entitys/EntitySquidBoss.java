@@ -43,6 +43,12 @@ public class EntitySquidBoss extends BaseBossEntity {
     }
 
     @Override
+    public int getMaxSpawnedInChunk()
+    {
+        return 1;
+    }
+    
+    @Override
     public int getTotalArmorValue() {
         return 9;
     }

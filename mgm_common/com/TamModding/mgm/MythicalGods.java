@@ -1,17 +1,21 @@
 package com.TamModding.mgm;
 
 import net.minecraft.creativetab.CreativeTabs;
+
 import com.TamModding.mgm.gui.MythicalGodsTab;
 import com.TamModding.mgm.lib.BlockHelper;
 import com.TamModding.mgm.lib.EntityHelper;
 import com.TamModding.mgm.lib.ItemHelper;
+import com.TamModding.mgm.lib.LogHelper;
 import com.TamModding.mgm.lib.LootHelper;
 import com.TamModding.mgm.lib.RecipeHelper;
 import com.TamModding.mgm.lib.Reference;
 import com.TamModding.mgm.lib.cape.CapeHelper;
+import com.TamModding.mgm.proxy.CommonProxyMythicalGods;
 import com.TamModding.mgm.world.OreGenerator;
 
 import cpw.mods.fml.common.Mod;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PostInit;
 import cpw.mods.fml.common.Mod.PreInit;
@@ -33,13 +37,20 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class MythicalGods {
     @Mod.Instance(Reference.MOD_ID)
     public static MythicalGods instance;
+   
 
     // Create the MGM Creative tab
     public static final CreativeTabs mythicalgodsTab = new MythicalGodsTab(Reference.MOD_ID);
     
-   
+    @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
+    public static CommonProxyMythicalGods proxy;
+    
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
+        // Register the Sound Handler (Client only)
+        proxy.registerSoundHandler();
+        // Initialize the log helper
+        LogHelper.init();
         // Initialize the Blocks and Items
         BlockHelper.init();
         ItemHelper.init();

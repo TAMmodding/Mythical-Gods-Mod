@@ -39,6 +39,12 @@ public class EntityHeroBrine extends BaseBossEntity {
         isImmuneToFire = true;
         this.getNavigator().setCanSwim(true);
     }
+    
+    @Override
+    public int getMaxSpawnedInChunk()
+    {
+        return 1;
+    }
 
     @Override
     public int getTotalArmorValue() {

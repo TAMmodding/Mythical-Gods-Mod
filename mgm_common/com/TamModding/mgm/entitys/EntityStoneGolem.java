@@ -42,6 +42,12 @@ public class EntityStoneGolem extends EntityMob {
     }
 
     @Override
+    public int getMaxSpawnedInChunk()
+    {
+        return 1;
+    }
+    
+    @Override
     public int getTotalArmorValue() {
         return 9;
     }

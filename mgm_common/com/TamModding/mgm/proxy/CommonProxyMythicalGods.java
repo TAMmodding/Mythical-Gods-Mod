@@ -10,4 +10,9 @@ public class CommonProxyMythicalGods {
     public void registerRenderThings() {
 
     }
+
+    public void registerSoundHandler() {
+      
+        
+    }
 }

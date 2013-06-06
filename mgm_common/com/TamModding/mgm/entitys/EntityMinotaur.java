@@ -38,6 +38,12 @@ public class EntityMinotaur extends BaseBossEntity {
         experienceValue = 250;
         isImmuneToFire = true;
     }
+    
+    @Override
+    public int getMaxSpawnedInChunk()
+    {
+        return 1;
+    }
 
     @Override
     public int getTotalArmorValue() {
@@ -66,12 +72,12 @@ public class EntityMinotaur extends BaseBossEntity {
 
     @Override
     protected String getLivingSound() {
-        return "sound.CowMooSoundEffect1";
+        return "mods.MGM.sounds.CowMooSoundEffect1";
     }
 
     @Override
     protected String getHurtSound() {
-        return "sound.CowMooSoundEffect";
+        return "CowMoo_1";
     }
 
     @Override
