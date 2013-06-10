@@ -7,6 +7,7 @@ import com.TamModding.mgm.entitys.EntityHeroBrine;
 import com.TamModding.mgm.entitys.EntityMinotaur;
 import com.TamModding.mgm.entitys.EntityPiggy;
 import com.TamModding.mgm.entitys.EntityShark;
+import com.TamModding.mgm.entitys.EntityVulcan;
 import com.TamModding.mgm.entitys.EntityWolfMinion;
 import com.TamModding.mgm.entitys.models.ModelApollo;
 import com.TamModding.mgm.entitys.models.ModelChickenBoss;
@@ -15,6 +16,7 @@ import com.TamModding.mgm.entitys.models.ModelHeroBrine;
 import com.TamModding.mgm.entitys.models.ModelMinotaur;
 import com.TamModding.mgm.entitys.models.ModelPiggy;
 import com.TamModding.mgm.entitys.models.ModelShark;
+import com.TamModding.mgm.entitys.models.ModelVulcan;
 import com.TamModding.mgm.entitys.models.ModelWolfMinion;
 import com.TamModding.mgm.entitys.render.RenderApollo;
 import com.TamModding.mgm.entitys.render.RenderChickenBoss;
@@ -23,6 +25,7 @@ import com.TamModding.mgm.entitys.render.RenderHeroBrine;
 import com.TamModding.mgm.entitys.render.RenderMinotaur;
 import com.TamModding.mgm.entitys.render.RenderPiggy;
 import com.TamModding.mgm.entitys.render.RenderShark;
+import com.TamModding.mgm.entitys.render.RenderVulcan;
 import com.TamModding.mgm.entitys.render.RenderWolfMinion;
 
 import cpw.mods.fml.client.registry.RenderingRegistry;
@@ -55,6 +58,7 @@ public class EntityHelper {
         EntityRegistry.registerGlobalEntityID(EntityWolfMinion.class, "WolfMinion", ReferenceID.WolfMinion, 0xFFFFFF, 0xC4C4C4);
         EntityRegistry.registerGlobalEntityID(EntityApollo.class, "Apollo", ReferenceID.Apollo, 0xFFAA00, 0xFFFF55);
         EntityRegistry.registerGlobalEntityID(EntityChickenBoss.class, "ChickenBoss", ReferenceID.ChickenBoss, 0xAAAAAA, 0xFFFFFF);
+        EntityRegistry.registerGlobalEntityID(EntityVulcan.class, "Vulcan", ReferenceID.Vulcan, 0xFFA500, 0xFF0000);
     }
     
     /**
@@ -70,6 +74,7 @@ public class EntityHelper {
         LanguageRegistry.instance().addStringLocalization("entity.WolfMinion.name", "Wolf Minion");
         LanguageRegistry.instance().addStringLocalization("entity.Apollo.name", "God Of Music: Apollo");
         LanguageRegistry.instance().addStringLocalization("entity.ChickenBoss.name", "Boss: Giant Chixy");
+        LanguageRegistry.instance().addStringLocalization("entity.Vulcan.name", "God Of Smith: Vulcan");
         
     }
     
@@ -85,5 +90,6 @@ public class EntityHelper {
         RenderingRegistry.registerEntityRenderingHandler(EntityHeroBrine.class, new RenderHeroBrine(new ModelHeroBrine(), 0.5F));
         RenderingRegistry.registerEntityRenderingHandler(EntityApollo.class, new RenderApollo(new ModelApollo(), 0.5F));
         RenderingRegistry.registerEntityRenderingHandler(EntityChickenBoss.class, new RenderChickenBoss(new ModelChickenBoss(), 2.3F));
+        RenderingRegistry.registerEntityRenderingHandler(EntityChickenBoss.class, new RenderVulcan(new ModelVulcan(), 0.5F));
     }
 }

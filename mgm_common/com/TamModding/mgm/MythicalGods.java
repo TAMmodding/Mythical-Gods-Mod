@@ -1,18 +1,21 @@
 package com.TamModding.mgm;
 
 import net.minecraft.creativetab.CreativeTabs;
+import net.minecraftforge.common.MinecraftForge;
 
+import com.TamModding.mgm.audio.MGM_SoundLoadEvent;
 import com.TamModding.mgm.gui.MythicalGodsTab;
 import com.TamModding.mgm.lib.BlockHelper;
 import com.TamModding.mgm.lib.EntityHelper;
 import com.TamModding.mgm.lib.ItemHelper;
 import com.TamModding.mgm.lib.LogHelper;
 import com.TamModding.mgm.lib.LootHelper;
+import com.TamModding.mgm.lib.MythicalGodsModPacketHandler;
 import com.TamModding.mgm.lib.RecipeHelper;
 import com.TamModding.mgm.lib.Reference;
 import com.TamModding.mgm.lib.cape.CapeHelper;
 import com.TamModding.mgm.proxy.CommonProxyMythicalGods;
-import com.TamModding.mgm.world.OreGenerator;
+import com.TamModding.mgm.world.*;
 
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.SidedProxy;
@@ -27,7 +30,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
-@NetworkMod(channels = { Reference.MOD_ID }, clientSideRequired = true, serverSideRequired = false)
+@NetworkMod(channels = { Reference.MOD_ID }, clientSideRequired = true, serverSideRequired = false, packetHandler = MythicalGodsModPacketHandler.class)
 /**
  * Mythical-Gods-Mod
  * 
@@ -58,11 +61,15 @@ public class MythicalGods {
         RecipeHelper.init();
         LootHelper.init();
         // Register the OreGenerator
-        GameRegistry.registerWorldGenerator(new OreGenerator());
+        GameRegistry.registerWorldGenerator(new OreWorldGeneratorEnd());
+        GameRegistry.registerWorldGenerator(new OreWorldGeneratorOverWorld());
+        GameRegistry.registerWorldGenerator(new OreWorldGeneratorNether());
         // Initialize the CapeHelper
         CapeHelper.init();
         // Initialize the Entitys
         EntityHelper.init();
+        //Sound Registry
+        MinecraftForge.EVENT_BUS.register(new MGM_SoundLoadEvent());
         // Set the name for the creative tab
         LanguageRegistry.instance().addStringLocalization("itemGroup." + Reference.MOD_ID, "Mythical Gods Mod");
     }
@@ -71,6 +78,8 @@ public class MythicalGods {
     public void init(FMLInitializationEvent event) {
         // Register Entity renders
         EntityHelper.registerEntityRenders();
+        
+
        
     }
 

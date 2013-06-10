@@ -7,9 +7,11 @@ import net.minecraft.block.Block;
 import com.TamModding.mgm.block.CheckedBlock;
 import com.TamModding.mgm.block.CloudBlock;
 import com.TamModding.mgm.block.CrackedMossy;
+import com.TamModding.mgm.block.ENDUnholyOre;
 import com.TamModding.mgm.block.HolyBlock;
 import com.TamModding.mgm.block.LimeStoneBlock;
 import com.TamModding.mgm.block.MarbleBlock;
+import com.TamModding.mgm.block.NetherUnholyOre;
 import com.TamModding.mgm.block.OlympusPillar;
 import com.TamModding.mgm.block.UnholyBlock;
 import com.TamModding.mgm.block.UnholyOre;
@@ -26,7 +28,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class BlockHelper {
     // Names of all the blocks, in the same order as registered lower in the class
     private static final String[] blockNames = new String[] { "Holy Block", "Olympus Pillar", "Unholy Block", "Unholy Ore", "Cloud Block", "Cracked MossyStone Brick", "Marble", "LimeStone",
-            "Checked Block" };
+            "Checked Block", "Nether Unholy Ore", "End Unholy Ore" };
 
     // Arraylist for containing all registered blocks
     private static final ArrayList<Block> blocks = new ArrayList<Block>();
@@ -43,6 +45,8 @@ public class BlockHelper {
     public static final Block MarbleBlock = new MarbleBlock(ReferenceID.MARBLE);
     public static final Block LimeStoneBlock = new LimeStoneBlock(ReferenceID.LIMESTONE);
     public static final Block CheckedBlock = new CheckedBlock(ReferenceID.CHECKEDBLOCK);
+    public static final Block NetherUnholyOre = new NetherUnholyOre(ReferenceID.NETHERUNHOLYORE);
+    public static final Block EndUnholyOre = new ENDUnholyOre(ReferenceID.ENDUNHOLYORE);
 
     /*
      * Adding all Blocks to the main BlockArray Make sure all blocks are registered here and that the NamesArray contains the same number of items,
@@ -58,6 +62,8 @@ public class BlockHelper {
         blocks.add(MarbleBlock);
         blocks.add(LimeStoneBlock);
         blocks.add(CheckedBlock);
+        blocks.add(NetherUnholyOre);
+        blocks.add(EndUnholyOre);
     }
 
     /**

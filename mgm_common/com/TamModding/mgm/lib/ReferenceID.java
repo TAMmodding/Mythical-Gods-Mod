@@ -12,7 +12,8 @@ public class ReferenceID {
     public static final int OLYMPUSPILLAR = 1022;
     public static final int UNHOLYBLOCK = 1023;
     public static final int UNHOLYORE = 1024;
-    public static final int CLOUDBLOCK = 1033;
+ public static final int ENDUNHOLYORE = 1046;
+    public static final int NETHERUNHOLYORE = 1047;   public static final int CLOUDBLOCK = 1033;
     public static final int CRACKEDMOSSY = 1034;
     public static final int MARBLE = 1043;
     public static final int LIMESTONE = 1044;
@@ -50,4 +51,5 @@ public class ReferenceID {
     public static final int WolfMinion = 107;
     public static final int Apollo = 108;
     public static final int ChickenBoss = 109;
+    public static final int Vulcan = 110;
 }
