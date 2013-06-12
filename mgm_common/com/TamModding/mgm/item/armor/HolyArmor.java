@@ -1,8 +1,12 @@
 package com.TamModding.mgm.item.armor;
 
 import net.minecraft.entity.Entity;
+import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemStack;
+import net.minecraft.potion.Potion;
+import net.minecraft.potion.PotionEffect;
+import net.minecraft.world.World;
 
 import com.TamModding.mgm.lib.ItemHelper;
 import com.TamModding.mgm.lib.Reference;
@@ -40,4 +44,21 @@ public class HolyArmor extends ArmorBase {
             return Reference.PATH_ARMOR + "HolyArmor_2.png";
         return Reference.PATH_ARMOR + "HolyArmor_2.png";
     }
+    
+    public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack itemStack) {
+	       
+	      if (player.getCurrentItemOrArmor(4) != null && player.getCurrentArmor(3) != null && player.getCurrentItemOrArmor(2) != null && player.getCurrentItemOrArmor(1) != null) {
+	          ItemStack helmet = player.getCurrentItemOrArmor(4);
+	          ItemStack plate = player.getCurrentItemOrArmor(3);
+	          ItemStack legs = player.getCurrentItemOrArmor(2);
+	          ItemStack boots = player.getCurrentItemOrArmor(1); 
+	          
+	          if (helmet.getItem() == ItemHelper.helmetHoly && plate.getItem() == ItemHelper.chestHoly && legs.getItem() == ItemHelper.leggingsHoly && boots.getItem() == ItemHelper.bootsHoly) 
+	          {
+	        	    player.fallDistance = 0.0F;
+	        		player.addPotionEffect(new PotionEffect(Potion.jump.getId(), 200, 2));
+	        		player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 200, 1));
+	          }
+	      }
+	  }
 }
