@@ -34,7 +34,7 @@ public class ItemHelper {
     private static final ArrayList<Item> items = new ArrayList<Item>();
 
     // EnumArmorMaterial for different armors
-    static EnumArmorMaterial holyARMOR = EnumHelper.addArmorMaterial("holyARMOR", 860, new int[] { 860, 860, 860, 860 }, 10);
+    static EnumArmorMaterial holyARMOR = EnumHelper.addArmorMaterial("holyARMOR", 400, new int[] { 200, 700, 500, 300 }, 10);
     static EnumArmorMaterial unholyARMOR = EnumHelper.addArmorMaterial("unholyARMOR", 460, new int[] { 460, 460, 460, 460 }, 10);
 
     // EnumToolMaterial for different tools

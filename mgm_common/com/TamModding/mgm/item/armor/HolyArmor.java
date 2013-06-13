@@ -27,7 +27,8 @@ public class HolyArmor extends ArmorBase {
         
        
     }
-
+    
+   
     
     @SideOnly(Side.CLIENT)
     @Override
@@ -45,9 +46,9 @@ public class HolyArmor extends ArmorBase {
         return Reference.PATH_ARMOR + "HolyArmor_2.png";
     }
     
-    public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack itemStack) {
+   public void onArmorTickUpdate(World world, EntityPlayer player, ItemStack itemStack) {
 	       
-	      if (player.getCurrentItemOrArmor(4) != null && player.getCurrentArmor(3) != null && player.getCurrentItemOrArmor(2) != null && player.getCurrentItemOrArmor(1) != null) {
+	      if (player.getCurrentItemOrArmor(4) != null && player.getCurrentItemOrArmor(3) != null && player.getCurrentItemOrArmor(2) != null && player.getCurrentItemOrArmor(1) != null) {
 	          ItemStack helmet = player.getCurrentItemOrArmor(4);
 	          ItemStack plate = player.getCurrentItemOrArmor(3);
 	          ItemStack legs = player.getCurrentItemOrArmor(2);
@@ -60,5 +61,5 @@ public class HolyArmor extends ArmorBase {
 	        		player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 200, 1));
 	          }
 	      }
-	  }
+	  } 
 }

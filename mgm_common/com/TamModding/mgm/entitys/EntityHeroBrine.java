@@ -58,12 +58,12 @@ public class EntityHeroBrine extends BaseBossEntity {
 
     @Override
     public int getMaxHealth() {
-        return 150000;
+        return 15000;
     }
 
     @Override
     public int getAttackStrength(Entity par1Entity) {
-        return 500;
+        return 800;
     }
 
     @Override

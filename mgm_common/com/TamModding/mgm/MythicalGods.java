@@ -38,6 +38,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  *         Copyright (c) 2013
  */
 public class MythicalGods {
+    
     @Mod.Instance(Reference.MOD_ID)
     public static MythicalGods instance;
    

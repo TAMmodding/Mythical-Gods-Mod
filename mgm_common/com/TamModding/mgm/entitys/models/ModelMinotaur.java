@@ -4,6 +4,8 @@ import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;
 import net.minecraft.entity.Entity;
 
+import org.lwjgl.opengl.GL11;
+
 /**
  * Mythical-Gods-Mod
  * 
@@ -230,6 +232,11 @@ public class ModelMinotaur extends ModelBase
   {
     super.render(entity, f, f1, f2, f3, f4, f5);
     setRotationAngles(f, f1, f2, f3, f4, f5, entity);
+
+    GL11.glTranslatef(0F, -6F, 0F);
+    GL11.glScalef(5F, 5F, 5F);//HERE
+
+
     Nose.render(f5);
     Arm_joint1.render(f5);
     Arm_joint2.render(f5);
