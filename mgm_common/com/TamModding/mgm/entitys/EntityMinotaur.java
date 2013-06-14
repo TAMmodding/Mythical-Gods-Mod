@@ -72,12 +72,12 @@ public class EntityMinotaur extends BaseBossEntity {
 
     @Override
     protected String getLivingSound() {
-        return "mods.MGM.sounds.CowMooSoundEffect1";
+        return "resources.mod.MGM.CowMooSoundEffect";
     }
 
     @Override
     protected String getHurtSound() {
-        return "CowMoo_1";
+        return "resources.mod.MGM.CowMooSoundEffect1";
     }
 
     @Override

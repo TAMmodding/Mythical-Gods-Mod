@@ -3,7 +3,7 @@ package com.TamModding.mgm;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 
-import com.TamModding.mgm.audio.MGM_SoundLoadEvent;
+import com.TamModding.mgm.audio.SoundHandler;
 import com.TamModding.mgm.gui.MythicalGodsTab;
 import com.TamModding.mgm.lib.BlockHelper;
 import com.TamModding.mgm.lib.EntityHelper;
@@ -15,13 +15,15 @@ import com.TamModding.mgm.lib.RecipeHelper;
 import com.TamModding.mgm.lib.Reference;
 import com.TamModding.mgm.lib.cape.CapeHelper;
 import com.TamModding.mgm.proxy.CommonProxyMythicalGods;
-import com.TamModding.mgm.world.*;
+import com.TamModding.mgm.world.OreWorldGeneratorEnd;
+import com.TamModding.mgm.world.OreWorldGeneratorNether;
+import com.TamModding.mgm.world.OreWorldGeneratorOverWorld;
 
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PostInit;
 import cpw.mods.fml.common.Mod.PreInit;
+import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
 import cpw.mods.fml.common.event.FMLPreInitializationEvent;
@@ -55,7 +57,7 @@ public class MythicalGods {
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {
         // Register the Sound Handler (Client only)
-        proxy.registerSoundHandler();
+        MinecraftForge.EVENT_BUS.register(new SoundHandler());
         // Initialize the log helper
         LogHelper.init();
         // Initialize the Blocks and Items
@@ -72,8 +74,7 @@ public class MythicalGods {
         CapeHelper.init();
         // Initialize the Entitys
         EntityHelper.init();
-        //Sound Registry
-        MinecraftForge.EVENT_BUS.register(new MGM_SoundLoadEvent());
+       
         // Set the name for the creative tab
         LanguageRegistry.instance().addStringLocalization("itemGroup." + Reference.MOD_ID, "Mythical Gods Mod");
     }

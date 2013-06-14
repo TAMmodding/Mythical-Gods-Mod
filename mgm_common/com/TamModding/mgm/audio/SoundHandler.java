@@ -1,12 +1,12 @@
 package com.TamModding.mgm.audio;
 
-import java.util.logging.Level;
+import java.io.File;
 
+import net.minecraft.client.Minecraft;
 import net.minecraftforge.client.event.sound.SoundLoadEvent;
 import net.minecraftforge.event.ForgeSubscribe;
-
-import com.TamModding.mgm.lib.LogHelper;
-import com.TamModding.mgm.lib.SoundHelper;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 /**
  * Mythical-Gods-Mod
  * 
@@ -15,19 +15,17 @@ import com.TamModding.mgm.lib.SoundHelper;
  */
 public class SoundHandler {
 
-    @ForgeSubscribe
-    public void onSoundLoad(SoundLoadEvent event) {
+@SideOnly(Side.CLIENT)
+@ForgeSubscribe
+public void onSoundLoad(SoundLoadEvent event) {
+File dataDir = Minecraft.getMinecraft().mcDataDir;
 
-        // For each custom sound file we have defined in Sounds
-        for (String soundFile : SoundHelper.soundFiles) {
-            // Try to add the custom sound file to the pool of sounds
-            try {
-                event.manager.soundPoolSounds.addSound(soundFile, this.getClass().getResource("/" + soundFile));
-            }
-            // If we cannot add the custom sound file to the pool, log the exception
-            catch (Exception e) {
-                LogHelper.log(Level.WARNING, "Failed loading sound file: " + soundFile);
-            }
-        }
-    }
+event.manager.soundPoolSounds.addSound("mod/MGM/CowMooSoundEffect.ogg", new File(
+dataDir, "resources/mod/MGM/CowMooSoundEffect.ogg"));
+
+
+event.manager.soundPoolSounds.addSound("mod/MGM/CowMooSoundEffect1.ogg", new File(
+dataDir, "resources/mod/MGM/CowMooSoundEffect1.ogg"));
+
+}
 }
