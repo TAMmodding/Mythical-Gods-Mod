@@ -23,7 +23,8 @@ public class ReferenceID {
     // ITEM ID REFERENCE (INGAME ID = id + 256)
     public static final int TRIDENT = 1025;
     public static final int STAFF = 1026;
-    public static final int LIGHTNINGBOLT = 1027;
+    public static final int BOLT = 1027;
+    public static final int LYRE = 1048;
     public static final int BATTLEAXE = 1028;
     public static final int HOLYGEM = 1029;
     public static final int HOLYSWORD = 1030;
@@ -31,6 +32,7 @@ public class ReferenceID {
     public static final int UNHOLYSWORD = 1032;
     public static final int NETHERDUST = 1033;
     public static final int NETHERROD = 1034;
+ 
     // ARMOR ID REFERENCE
     public static final int HolyHelmet = 1035;
     public static final int HolyChest = 1036;

@@ -48,6 +48,9 @@ public class MythicalGods {
     
     @SidedProxy(clientSide = Reference.CLIENT_PROXY_CLASS, serverSide = Reference.SERVER_PROXY_CLASS)
     public static CommonProxyMythicalGods proxy;
+
+
+   
     
     @PreInit
     public void preInit(FMLPreInitializationEvent event) {

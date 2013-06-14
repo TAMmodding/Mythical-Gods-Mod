@@ -27,8 +27,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  */
 public class ItemHelper {
     // Names of all the items, in the same order as registered lower in the class.
-    private static final String[] itemNames = new String[] { "Holy Gem", "Holy Sword", "Unholy Gem", "Unholy Sword", "Nether Dust", "Nether Rod", "Holy Helmet", "Holy Chestplate", "Holy Leggings",
-            "Holy Boots", "UnHoly Helmet", "UnHoly Chestplate", "UnHoly Leggings", "UnHoly Boots" };
+    private static final String[] itemNames = new String[] { "\u00A76 Holy Gem", "\u00A7e Holy Sword", "\u00A71 Unholy Gem", "\u00A79 Unholy Sword", "\u00A74 Nether Dust", "\u00A74 Nether Rod", "\u00A7e Holy Helmet", "\u00A7e Holy Chestplate", "\u00A7e Holy Leggings",
+            "\u00A7e Holy Boots", "\u00A79 UnHoly Helmet", "\u00A79 UnHoly Chestplate", "\u00A79 UnHoly Leggings", "\u00A79 UnHoly Boots" };
 
     // Arraylist for containing all registered items
     private static final ArrayList<Item> items = new ArrayList<Item>();
@@ -41,6 +41,7 @@ public class ItemHelper {
     static EnumToolMaterial holyTOOL = EnumHelper.addToolMaterial("holyTOOL", 3, 3000, 12.0F, 888, 22);
     static EnumToolMaterial unholyTOOL = EnumHelper.addToolMaterial("unholyTOOL", 3, 2345, 12.0F, 550, 22);
 
+
     /*
      * Registering all the different items Use ReferenceID.ITEMNAME for the ID
      */
@@ -50,6 +51,7 @@ public class ItemHelper {
     public static final Item unholySword = new UnholySword(ReferenceID.UNHOLYSWORD, unholyTOOL);
     public static final Item netherDust = new NetherDust(ReferenceID.NETHERDUST);
     public static final Item netherRod = new NetherRod(ReferenceID.NETHERROD);
+  
 
     private static int holyArmorRenderIndex = RenderingRegistry.addNewArmourRendererPrefix("Holy");
     public static Item helmetHoly = new HolyArmor(ReferenceID.HolyHelmet, holyARMOR, holyArmorRenderIndex, 0, "HolyHelmet");
@@ -82,6 +84,7 @@ public class ItemHelper {
         items.add(chestUnHoly);
         items.add(leggingsUnHoly);
         items.add(bootsUnHoly);
+ 
     }
 
     /**

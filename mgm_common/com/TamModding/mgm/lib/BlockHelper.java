@@ -27,8 +27,8 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  */
 public class BlockHelper {
     // Names of all the blocks, in the same order as registered lower in the class
-    private static final String[] blockNames = new String[] { "Holy Block", "Olympus Pillar", "Unholy Block", "Unholy Ore", "Cloud Block", "Cracked MossyStone Brick", "Marble", "LimeStone",
-            "Checked Block", "Nether Unholy Ore", "End Unholy Ore" };
+    private static final String[] blockNames = new String[] { "\u00A76 Holy Block", "Olympus Pillar", "\u00A71 Unholy Block", "\u00A71 Unholy Ore", "\u00A77 Cloud Block", "Cracked MossyStone Brick", "Marble", "LimeStone",
+            "Checked Block", "\u00A71 Nether Unholy Ore", "\u00A71 End Unholy Ore" };
 
     // Arraylist for containing all registered blocks
     private static final ArrayList<Block> blocks = new ArrayList<Block>();
