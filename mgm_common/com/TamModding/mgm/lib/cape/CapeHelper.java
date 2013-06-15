@@ -17,7 +17,7 @@ import cpw.mods.fml.relauncher.Side;
 /**
  * Mythical-Gods-Mod
  * 
- * @author TAM Modding (Msvisser)
+ * @author TAM Modding 
  *         Copyright (c) 2013
  */
 public class CapeHelper {
