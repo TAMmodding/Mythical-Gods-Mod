@@ -13,6 +13,7 @@ public class Reference {
     public static final String VERSION = "FOR TESTERS ONLY!";
     public static final String SERVER_PROXY_CLASS = "com.TamModding.mgm.proxy.CommonProxyMythicalGods";
     public static final String CLIENT_PROXY_CLASS = "com.TamModding.mgm.proxy.ClientProxyMythicalGods";
+    public static final String CHANNEL_NAME = MOD_ID;
 
     /* Filepath Related Constants */
     public static final String RESOURCE_FOLDER = MOD_ID;

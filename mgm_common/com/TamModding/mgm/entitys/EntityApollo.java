@@ -13,6 +13,7 @@ import net.minecraft.entity.ai.EntityAIWatchClosest;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.world.World;
 
+import com.TamModding.mgm.audio.Sounds;
 import com.TamModding.mgm.lib.Reference;
 
 /**
@@ -73,7 +74,7 @@ public class EntityApollo extends BaseBossEntity {
 
     @Override
     protected String getLivingSound() {
-        return null;
+        return Sounds.Apollo_Voice;
     }
 
     @Override

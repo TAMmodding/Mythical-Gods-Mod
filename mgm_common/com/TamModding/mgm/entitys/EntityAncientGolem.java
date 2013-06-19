@@ -23,8 +23,8 @@ import cpw.mods.fml.relauncher.SideOnly;
  * @author TAM Modding
  *         Copyright (c) 2013
  */
-public class EntityStoneGolem extends EntityMob {
-    public EntityStoneGolem(World par1World) {
+public class EntityAncientGolem extends EntityMob {
+    public EntityAncientGolem(World par1World) {
         super(par1World);
         texture = Reference.PATH_ENTITYS + "StoneGolem.png";
         moveSpeed = 0.20F;

@@ -1,5 +1,6 @@
 package com.TamModding.mgm.entitys;
 
+import com.TamModding.mgm.audio.Sounds;
 import com.TamModding.mgm.lib.Reference;
 
 import net.minecraft.entity.Entity;
@@ -18,8 +19,7 @@ import net.minecraft.world.World;
 /**
  * Mythical-Gods-Mod
  * 
- * @author TAM Modding
- *         Copyright (c) 2013
+ * @author TAM Modding Copyright (c) 2013
  */
 public class EntityMinotaur extends BaseBossEntity {
     public EntityMinotaur(World par1World) {
@@ -38,10 +38,9 @@ public class EntityMinotaur extends BaseBossEntity {
         experienceValue = 250;
         isImmuneToFire = true;
     }
-    
+
     @Override
-    public int getMaxSpawnedInChunk()
-    {
+    public int getMaxSpawnedInChunk() {
         return 1;
     }
 
@@ -72,23 +71,22 @@ public class EntityMinotaur extends BaseBossEntity {
 
     @Override
     protected String getLivingSound() {
-        return "resources.mod.MGM.CowMooSoundEffect";
+        return Sounds.MOO_ONE;
     }
 
     @Override
     protected String getHurtSound() {
-        return "resources.mod.MGM.CowMooSoundEffect1";
+        return Sounds.MOO_TWO;
     }
+    
 
     @Override
     protected String getDeathSound() {
         return null;
     }
 
-    
     @Override
-    protected void playStepSound(int par1, int par2, int par3, int par4)
-    {
+    protected void playStepSound(int par1, int par2, int par3, int par4) {
         this.playSound("mob.irongolem.walk", 1.0F, 1.0F);
     }
 
@@ -100,9 +98,6 @@ public class EntityMinotaur extends BaseBossEntity {
     @Override
     protected void dropRareDrop(int par1) {
     }
-
-   
-    
 
     @Override
     protected void fall(float par1) {

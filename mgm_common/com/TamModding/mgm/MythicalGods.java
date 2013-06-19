@@ -4,16 +4,16 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraftforge.common.MinecraftForge;
 
 import com.TamModding.mgm.audio.SoundHandler;
-import com.TamModding.mgm.gui.MythicalGodsTab;
+import com.TamModding.mgm.creativetab.MythicalGodsTab;
 import com.TamModding.mgm.lib.BlockHelper;
 import com.TamModding.mgm.lib.EntityHelper;
 import com.TamModding.mgm.lib.ItemHelper;
 import com.TamModding.mgm.lib.LogHelper;
 import com.TamModding.mgm.lib.LootHelper;
-import com.TamModding.mgm.lib.MythicalGodsModPacketHandler;
 import com.TamModding.mgm.lib.RecipeHelper;
 import com.TamModding.mgm.lib.Reference;
 import com.TamModding.mgm.lib.cape.CapeHelper;
+import com.TamModding.mgm.network.PacketHandler;
 import com.TamModding.mgm.proxy.CommonProxyMythicalGods;
 import com.TamModding.mgm.world.OreWorldGeneratorEnd;
 import com.TamModding.mgm.world.OreWorldGeneratorNether;
@@ -32,7 +32,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 @Mod(modid = Reference.MOD_ID, name = Reference.MOD_NAME, version = Reference.VERSION)
-@NetworkMod(channels = { Reference.MOD_ID }, clientSideRequired = true, serverSideRequired = false, packetHandler = MythicalGodsModPacketHandler.class)
+@NetworkMod(channels = { Reference.MOD_ID }, clientSideRequired = true, serverSideRequired = false, packetHandler = PacketHandler.class)
 /**
  * Mythical-Gods-Mod
  * 

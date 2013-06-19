@@ -5,10 +5,8 @@ import java.util.Random;
 import com.TamModding.mgm.lib.BlockHelper;
 
 
-import net.minecraft.block.Block;
 import net.minecraft.world.World;
 import net.minecraft.world.chunk.IChunkProvider;
-import net.minecraft.world.gen.feature.WorldGenMinable;
 import cpw.mods.fml.common.IWorldGenerator;
 
 public class OreWorldGeneratorNether implements IWorldGenerator{
@@ -25,7 +23,8 @@ public class OreWorldGeneratorNether implements IWorldGenerator{
     
 	
     
-	private void generateSurface() {
+	@SuppressWarnings("unused")
+    private void generateSurface() {
 		
 		
 	}

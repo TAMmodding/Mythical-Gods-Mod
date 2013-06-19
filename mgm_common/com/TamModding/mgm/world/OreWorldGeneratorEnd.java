@@ -23,7 +23,8 @@ public class OreWorldGeneratorEnd implements IWorldGenerator{
     
 	
     
-	private void generateSurface() {
+	@SuppressWarnings("unused")
+    private void generateSurface() {
 		
 		
 	}
