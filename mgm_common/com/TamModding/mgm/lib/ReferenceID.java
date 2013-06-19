@@ -32,6 +32,7 @@ public class ReferenceID {
     public static final int UNHOLYSWORD = 1032;
     public static final int NETHERDUST = 1033;
     public static final int NETHERROD = 1034;
+    public static final int TAMLOGO = 1048;
  
     // ARMOR ID REFERENCE
     public static final int HolyHelmet = 1035;

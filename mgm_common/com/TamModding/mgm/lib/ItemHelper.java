@@ -10,6 +10,7 @@ import net.minecraftforge.common.EnumHelper;
 import com.TamModding.mgm.item.HolyGem;
 import com.TamModding.mgm.item.NetherDust;
 import com.TamModding.mgm.item.NetherRod;
+import com.TamModding.mgm.item.TAMLogo;
 import com.TamModding.mgm.item.UnholyGem;
 import com.TamModding.mgm.item.armor.HolyArmor;
 import com.TamModding.mgm.item.armor.UnHolyArmor;
@@ -28,7 +29,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class ItemHelper {
     // Names of all the items, in the same order as registered lower in the class.
     private static final String[] itemNames = new String[] { "\u00A76 Holy Gem", "\u00A7e Holy Sword", "\u00A71 Unholy Gem", "\u00A79 Unholy Sword", "\u00A74 Nether Dust", "\u00A74 Nether Rod", "\u00A7e Holy Helmet", "\u00A7e Holy Chestplate", "\u00A7e Holy Leggings",
-            "\u00A7e Holy Boots", "\u00A79 UnHoly Helmet", "\u00A79 UnHoly Chestplate", "\u00A79 UnHoly Leggings", "\u00A79 UnHoly Boots" };
+            "\u00A7e Holy Boots", "\u00A79 UnHoly Helmet", "\u00A79 UnHoly Chestplate", "\u00A79 UnHoly Leggings", "\u00A79 UnHoly Boots", "\u00A76 TAMLogo" };
 
     // Arraylist for containing all registered items
     private static final ArrayList<Item> items = new ArrayList<Item>();
@@ -51,6 +52,7 @@ public class ItemHelper {
     public static final Item unholySword = new UnholySword(ReferenceID.UNHOLYSWORD, unholyTOOL);
     public static final Item netherDust = new NetherDust(ReferenceID.NETHERDUST);
     public static final Item netherRod = new NetherRod(ReferenceID.NETHERROD);
+    public static final Item TAMLogo = new TAMLogo(ReferenceID.TAMLOGO);
   
 
     private static int holyArmorRenderIndex = RenderingRegistry.addNewArmourRendererPrefix("Holy");
@@ -84,6 +86,7 @@ public class ItemHelper {
         items.add(chestUnHoly);
         items.add(leggingsUnHoly);
         items.add(bootsUnHoly);
+        items.add(TAMLogo);
  
     }
 
