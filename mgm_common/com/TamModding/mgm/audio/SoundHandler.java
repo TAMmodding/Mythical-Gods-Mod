@@ -28,7 +28,7 @@ public class SoundHandler {
             try {
                 event.manager.soundPoolSounds.addSound(sound, this.getClass().getResource("/" + sound));
             } catch(Exception e) {
-                LogHelper.log(Level.WARNING, "Failed loading sound: " + sound);
+                LogHelper.log(Level.WARNING, "Failed loading Mythical Gods Mod sound: " + sound);
             }
         }
         
