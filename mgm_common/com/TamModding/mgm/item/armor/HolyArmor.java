@@ -57,7 +57,7 @@ public class HolyArmor extends ArmorBase {
 	          if (helmet.getItem() == ItemHelper.helmetHoly && plate.getItem() == ItemHelper.chestHoly && legs.getItem() == ItemHelper.leggingsHoly && boots.getItem() == ItemHelper.bootsHoly) 
 	          {
 	        	    player.fallDistance = 0.0F;
-	        		player.addPotionEffect(new PotionEffect(Potion.jump.getId(), 200, 2));
+	        		player.capabilities.allowFlying = true;
 	        		player.addPotionEffect(new PotionEffect(Potion.moveSpeed.getId(), 200, 1));
 	          }
 	      }
