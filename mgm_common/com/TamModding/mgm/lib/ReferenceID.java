@@ -19,12 +19,13 @@ public class ReferenceID {
     public static final int CHECKEDBLOCK = 1045;
     public static final int ENDUNHOLYORE = 1046;
     public static final int NETHERUNHOLYORE = 1047;
+    public static final int ALTAR = 1050;
 
     // ITEM ID REFERENCE (INGAME ID = id + 256)
     public static final int TRIDENT = 1025;
     public static final int STAFF = 1026;
     public static final int BOLT = 1027;
-    public static final int LYRE = 1048;
+    public static final int LYRE = 1049;
     public static final int BATTLEAXE = 1028;
     public static final int HOLYGEM = 1029;
     public static final int HOLYSWORD = 1030;

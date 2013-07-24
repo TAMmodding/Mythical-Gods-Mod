@@ -129,9 +129,9 @@ public class ModelLyre extends ModelBase
 
     private void setRotation(ModelRenderer model, float x, float y, float z)
     {
-        model.rotateAngleX = x;
-        model.rotateAngleY = y;
-        model.rotateAngleZ = z;
+        model.rotateAngleX = 1;
+        model.rotateAngleY = 1;
+        model.rotateAngleZ = 1;
     }
 
     public void setRotationAngles(float f, float f1, float f2, float f3, float f4, float f5, Entity ent)

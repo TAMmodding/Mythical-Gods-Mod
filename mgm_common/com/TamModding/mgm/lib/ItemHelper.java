@@ -8,6 +8,7 @@ import net.minecraft.item.Item;
 import net.minecraftforge.common.EnumHelper;
 
 import com.TamModding.mgm.item.HolyGem;
+import com.TamModding.mgm.item.ModItem;
 import com.TamModding.mgm.item.NetherDust;
 import com.TamModding.mgm.item.NetherRod;
 import com.TamModding.mgm.item.TAMLogo;
@@ -29,7 +30,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class ItemHelper {
     // Names of all the items, in the same order as registered lower in the class.
     private static final String[] itemNames = new String[] { "\u00A76 Holy Gem", "\u00A7e Holy Sword", "\u00A71 Unholy Gem", "\u00A79 Unholy Sword", "\u00A74 Nether Dust", "\u00A74 Nether Rod", "\u00A7e Holy Helmet", "\u00A7e Holy Chestplate", "\u00A7e Holy Leggings",
-            "\u00A7e Holy Boots", "\u00A79 UnHoly Helmet", "\u00A79 UnHoly Chestplate", "\u00A79 UnHoly Leggings", "\u00A79 UnHoly Boots", "\u00A76 TAMLogo" };
+            "\u00A7e Holy Boots", "\u00A79 UnHoly Helmet", "\u00A79 UnHoly Chestplate", "\u00A79 UnHoly Leggings", "\u00A79 UnHoly Boots", "\u00A76 TAMLogo", "Lyre Weapon" };
 
     // Arraylist for containing all registered items
     private static final ArrayList<Item> items = new ArrayList<Item>();
@@ -52,7 +53,7 @@ public class ItemHelper {
     public static final Item unholySword = new UnholySword(ReferenceID.UNHOLYSWORD, unholyTOOL);
     public static final Item netherDust = new NetherDust(ReferenceID.NETHERDUST);
     public static final Item netherRod = new NetherRod(ReferenceID.NETHERROD);
-    public static final Item TAMLogo = new TAMLogo(ReferenceID.TAMLOGO);
+    public static final Item TAMLogo = new TAMLogo(ReferenceID.TAMLOGO).setCreativeTab(null);
   
 
     private static int holyArmorRenderIndex = RenderingRegistry.addNewArmourRendererPrefix("Holy");
@@ -67,6 +68,8 @@ public class ItemHelper {
     public static Item leggingsUnHoly = new UnHolyArmor(ReferenceID.UnHolyLeggings, unholyARMOR, unholyArmorRenderIndex, 2, "UnholyLeggings");
     public static Item bootsUnHoly = new UnHolyArmor(ReferenceID.UnHolyShoes, unholyARMOR, unholyArmorRenderIndex, 3, "UnholyBoots");
 
+    public static Item LyreWeapon = new ModItem(ReferenceID.LYRE);
+    
     /*
      * Adding all Items to the main ItemArray Make sure all items are registered here and that the NamesArray contains the same number of items,
      * otherwise this would end in a crash.
@@ -87,7 +90,7 @@ public class ItemHelper {
         items.add(leggingsUnHoly);
         items.add(bootsUnHoly);
         items.add(TAMLogo);
- 
+        items.add(LyreWeapon);
     }
 
     /**

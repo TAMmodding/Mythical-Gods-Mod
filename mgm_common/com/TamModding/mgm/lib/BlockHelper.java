@@ -4,6 +4,8 @@ import java.util.ArrayList;
 
 import net.minecraft.block.Block;
 
+import com.TamModding.mgm.MythicalGods;
+import com.TamModding.mgm.block.BlockAltar;
 import com.TamModding.mgm.block.CheckedBlock;
 import com.TamModding.mgm.block.CloudBlock;
 import com.TamModding.mgm.block.CrackedMossy;
@@ -28,7 +30,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 public class BlockHelper {
     // Names of all the blocks, in the same order as registered lower in the class
     private static final String[] blockNames = new String[] { "\u00A76Holy Block", "Olympus Pillar", "\u00A71Unholy Block", "\u00A71Unholy Ore", "\u00A77Cloud Block", "Cracked MossyStone Brick", "Marble", "LimeStone",
-            "Checked Block", "\u00A71Nether Unholy Ore", "\u00A71End Unholy Ore" };
+            "Checked Block", "\u00A71Nether Unholy Ore", "\u00A71End Unholy Ore", "Altar" };
 
     // Arraylist for containing all registered blocks
     private static final ArrayList<Block> blocks = new ArrayList<Block>();
@@ -47,7 +49,8 @@ public class BlockHelper {
     public static final Block CheckedBlock = new CheckedBlock(ReferenceID.CHECKEDBLOCK);
     public static final Block NetherUnholyOre = new NetherUnholyOre(ReferenceID.NETHERUNHOLYORE);
     public static final Block EndUnholyOre = new ENDUnholyOre(ReferenceID.ENDUNHOLYORE);
-
+    public static final Block Altar = new BlockAltar(ReferenceID.ALTAR).setCreativeTab(MythicalGods.mythicalgodsTab);
+    
     /*
      * Adding all Blocks to the main BlockArray Make sure all blocks are registered here and that the NamesArray contains the same number of items,
      * otherwise this would end in a crash.
@@ -64,6 +67,7 @@ public class BlockHelper {
         blocks.add(CheckedBlock);
         blocks.add(NetherUnholyOre);
         blocks.add(EndUnholyOre);
+        blocks.add(Altar);
     }
 
     /**

@@ -1,5 +1,9 @@
 package com.TamModding.mgm.lib;
 
+import net.minecraftforge.client.MinecraftForgeClient;
+
+import com.TamModding.mgm.block.ItemAltarRenderer;
+import com.TamModding.mgm.block.RenderAltar;
 import com.TamModding.mgm.entitys.EntityApollo;
 import com.TamModding.mgm.entitys.EntityChickenBoss;
 import com.TamModding.mgm.entitys.EntityFlyPig;
@@ -20,11 +24,14 @@ import com.TamModding.mgm.entitys.render.RenderApollo;
 import com.TamModding.mgm.entitys.render.RenderChickenBoss;
 import com.TamModding.mgm.entitys.render.RenderFlyPig;
 import com.TamModding.mgm.entitys.render.RenderHeroBrine;
+import com.TamModding.mgm.entitys.render.RenderLyreWeapon;
 import com.TamModding.mgm.entitys.render.RenderMinotaur;
 import com.TamModding.mgm.entitys.render.RenderPiggy;
 import com.TamModding.mgm.entitys.render.RenderShark;
 import com.TamModding.mgm.entitys.render.RenderWolfMinion;
+import com.TamModding.mgm.entitys.tileEntitys.TileEntityAltar;
 
+import cpw.mods.fml.client.registry.ClientRegistry;
 import cpw.mods.fml.client.registry.RenderingRegistry;
 import cpw.mods.fml.common.registry.EntityRegistry;
 import cpw.mods.fml.common.registry.LanguageRegistry;
@@ -41,6 +48,8 @@ public class EntityHelper {
         registerEntity();
         /* Register Entity names*/
         registerEntityNames();
+        registerItemModels();
+        registerBlockModels();
     }
     
     /**
@@ -85,5 +94,17 @@ public class EntityHelper {
         RenderingRegistry.registerEntityRenderingHandler(EntityHeroBrine.class, new RenderHeroBrine(new ModelHeroBrine(), 0.5F));
         RenderingRegistry.registerEntityRenderingHandler(EntityApollo.class, new RenderApollo(new ModelApollo(), 0.5F));
         RenderingRegistry.registerEntityRenderingHandler(EntityChickenBoss.class, new RenderChickenBoss(new ModelChickenBoss(), 2.3F));
+    }
+    
+    
+    public static void registerItemModels(){
+        MinecraftForgeClient.registerItemRenderer(ItemHelper.LyreWeapon.itemID, new RenderLyreWeapon());
+
+    }
+    
+    
+    public static void registerBlockModels(){
+    	ClientRegistry.bindTileEntitySpecialRenderer(TileEntityAltar.class, new RenderAltar());
+        MinecraftForgeClient.registerItemRenderer(BlockHelper.Altar.blockID, new ItemAltarRenderer());
     }
 }
